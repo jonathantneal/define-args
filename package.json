@@ -1,6 +1,6 @@
 {
   "name": "define-args",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Bind arguments to a function to create another function of smaller arity",
   "author": "Jonathan Neal <jonathantneal@hotmail.com>",
   "license": "CC0-1.0",

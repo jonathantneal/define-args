@@ -7,7 +7,7 @@ export default function defineArgs (object) {
 				throw new TypeError('args must be called on a function')
 			}
 
-			const func = Function('f', 'a', 'return function (' + Array.apply(
+			const func = Function('f', 'a', 'return function(' + Array.apply(
 				null,
 				Array(
 					Math.max(

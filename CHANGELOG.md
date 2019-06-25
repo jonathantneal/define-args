@@ -1,5 +1,9 @@
 # Changes to define-args
 
+### 0.1.2 (June 25, 2019)
+
+- Changed: Removed more space from function string
+
 ### 0.1.1 (June 25, 2019)
 
 - Changed: Removed spaces from function string

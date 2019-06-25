@@ -13,14 +13,14 @@ It is similar to [`bind`], with the exception that `args` will not bind context.
 
 Add **define-args** to your document:
 
-```js
-<script src="https://unpkg.com/define-args"></script><!-- 312 bytes -->
+```html
+<script src="https://unpkg.com/define-args"></script><!-- 311 bytes -->
 ```
 
 Alternatively, import the browser module script:
 
 ```js
-import defineArgs from 'https://unpkg.com/define-args/browser.mjs' // 315 bytes
+import defineArgs from 'https://unpkg.com/define-args/browser.mjs' // 314 bytes
 ```
 
 Use **define-args** to enable `args()` on any function:
