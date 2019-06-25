@@ -2,7 +2,6 @@ import babel from 'rollup-plugin-babel'
 import { terser } from 'rollup-plugin-terser'
 
 const isBrowser = String(process.env.NODE_ENV).includes('browser')
-const isNode = String(process.env.NODE_ENV).includes('node')
 
 const targets = isBrowser ? 'ie >= 9' : { node: 8 }
 const input = `src/index.js`

@@ -17,7 +17,7 @@ export default function defineArgs (object) {
 				)
 			).map(
 				String
-			) + ') { return f.apply(this, a.concat.apply(a, arguments)) }')(
+			) + '){return f.apply(this,a.concat.apply(a,arguments))}')(
 				this,
 				Array.prototype.slice.call(arguments)
 			)

@@ -14,13 +14,13 @@ It is similar to [`bind`], with the exception that `args` will not bind context.
 Add **define-args** to your document:
 
 ```js
-<script src="https://unpkg.com/define-args"></script><!-- 316 bytes -->
+<script src="https://unpkg.com/define-args"></script><!-- 312 bytes -->
 ```
 
 Alternatively, import the browser module script:
 
 ```js
-import defineArgs from 'https://unpkg.com/define-args/browser.mjs' // 318 bytes
+import defineArgs from 'https://unpkg.com/define-args/browser.mjs' // 315 bytes
 ```
 
 Use **define-args** to enable `args()` on any function:
@@ -83,13 +83,13 @@ npm install define-args
 Use **define-args** to extend functions:
 
 ```js
-const defineArgs = require('define-args') // 405 bytes
+const defineArgs = require('define-args') // 403 bytes
 ```
 
 Alternatively, import the module script:
 
 ```js
-import defineArgs from 'define-args' // 403 bytes
+import defineArgs from 'define-args' // 401 bytes
 ```
 
 Both Node scripts work in Node 8+.
