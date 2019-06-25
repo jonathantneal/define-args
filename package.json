@@ -1,0 +1,87 @@
+{
+  "name": "define-args",
+  "version": "0.1.0",
+  "description": "Bind arguments to a function to create another function of smaller arity",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/define-args",
+  "homepage": "https://github.com/jonathantneal/define-args#readme",
+  "bugs": "https://github.com/jonathantneal/define-args/issues",
+  "main": "index.js",
+  "module": "index.mjs",
+  "browser": "browser.js",
+  "files": [
+    "browser.js",
+    "browser.mjs",
+    "index.js",
+    "index.mjs"
+  ],
+  "scripts": {
+    "build": "npm run build:browser && npm run build:node",
+    "build:browser": "cross-env NODE_ENV=browser rollup --config",
+    "postbuild:browser": "npm run size:browser",
+    "build:node": "cross-env NODE_ENV=node rollup --config",
+    "postbuild:node": "npm run size:node",
+    "size": "npm run size:browser && npm run size:node",
+    "size:browser": "gzip-size browser.js && gzip-size browser.mjs",
+    "size:node": "gzip-size index.js && gzip-size index.mjs",
+    "test": "npm run test:lint && npm run test:tape",
+    "test:lint": "eslint src/{*,**/*}.js --cache --ignore-path .gitignore --quiet",
+    "test:tape": "node test",
+    "pretest:tape": "npm run build:node",
+    "watch": "nodemon --exec \"npm run test\" --watch src --watch test",
+    "prepublishOnly": "npm run test && npm run build"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-eslint": "^10.0.2",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.0.1",
+    "gzip-size-cli": "^3.0.0",
+    "nodemon": "^1.19.1",
+    "pre-commit": "^1.2.2",
+    "rollup": "^1.16.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "impliedStrict": true,
+      "sourceType": "module"
+    },
+    "root": true,
+    "rules": {
+      "no-console": [
+        0,
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ]
+    }
+  },
+  "keywords": [
+    "args",
+    "arguments",
+    "class",
+    "function",
+    "javacript",
+    "js",
+    "prototype",
+    "web"
+  ]
+}
